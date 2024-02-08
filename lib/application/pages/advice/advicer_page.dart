@@ -59,8 +59,11 @@ class AdvicerPage extends StatelessWidget {
                       color: themeData.colorScheme.secondary,
                     );
                   } else if (state is AdvicerStateLoaded) {
-                    return AdviceField(
-                      advice: state.advice,
+                    return Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: AdviceField(
+                        advice: state.advice,
+                      ),
                     );
                   } else if (state is AdvicerStateError) {
                     return ErrorMessage(errorMessage: state.errorMessage);
