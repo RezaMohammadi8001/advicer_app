@@ -9,8 +9,8 @@ abstract class AdviceRemoteDatasource {
 }
 
 class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
-  final Dio dio = Dio();
-
+  final Dio dio;
+  AdviceRemoteDatasourceImpl({required this.dio});
   @override
   Future<AdviceModel> getRandomeAdviceFromDatasource() async {
     final response =
